@@ -31,6 +31,7 @@ class RainforestCallback(Resource):
     def post(self):
         try:
             try:
+                print(request.json)
                 # db_id = get_db_object().save_request({"request": req})
                 # err, error_code, req = Validator(req).validate_docusign_request()
                 # if len(err) > 0:

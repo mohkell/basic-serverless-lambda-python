@@ -11,5 +11,14 @@
   "devDependencies": {
     "serverless-python-requirements": "^5.1.1",
     "serverless-wsgi": "^3.0.0"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohkell/basic-serverless-lambda-python.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohkell/basic-serverless-lambda-python/issues"
+  },
+  "homepage": "https://github.com/mohkell/basic-serverless-lambda-python#readme"
 }

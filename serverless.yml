@@ -14,7 +14,7 @@ package:
 
 functions:
   theLambda:
-    name: test-lambda
+    name: cf-serverless-lambda
     handler: lambda.handler
     description: test-lambda
     timeout: 5 # seconds

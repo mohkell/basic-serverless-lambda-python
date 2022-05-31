@@ -8,7 +8,7 @@ provider:
 
 plugins:
   - serverless-python-requirements
-  #- serverless-wsgi
+  - serverless-wsgi
 custom:
   wsgi:
     app: lambda_function.app

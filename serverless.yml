@@ -16,21 +16,21 @@ package:
   individually: true
 
 functions:
-  theLambda:
-    name: cf-serverless-lambda
-#    handler: lambda.handler
-    handler: wsgi_handler.handler
-    description: test-lambda
-    timeout: 5 # seconds
-    memorySize: 128 # mb
-    package:
-      patterns:
-        - "!node_modules/**"
-        - "!yarn.lock"
-        - "!package-lock.json"
-        - "!package.json"
-#  api:
- #   handler: wsgi_handler.handler
+#   theLambda:
+#     name: cf-serverless-lambda
+# #    handler: lambda.handler
+#     handler: wsgi_handler.handler
+#     description: test-lambda
+#     timeout: 5 # seconds
+#     memorySize: 128 # mb
+#     package:
+#       patterns:
+#         - "!node_modules/**"
+#         - "!yarn.lock"
+#         - "!package-lock.json"
+#         - "!package.json"
+ api:
+   handler: wsgi_handler.handler
       events:
         - http: ANY /
         - http: 'ANY {proxy+}'

@@ -8,14 +8,17 @@ provider:
 
 plugins:
   - serverless-python-requirements
-
+  - serverless-wsgi
+custom:
+  wsgi:
+    app: lambda_function.app
 package:
   individually: true
 
 functions:
   theLambda:
     name: cf-serverless-lambda
-    handler: lambda.handler
+    handler: wsgi_handler.handler
     description: test-lambda
     timeout: 5 # seconds
     memorySize: 128 # mb
@@ -25,3 +28,9 @@ functions:
         - "!yarn.lock"
         - "!package-lock.json"
         - "!package.json"
+#  api:
+ #   handler: wsgi_handler.handler
+      events:
+        - http: ANY /
+        - http: 'ANY {proxy+}'
+      timeout: 900
